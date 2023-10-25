@@ -3,7 +3,7 @@ function App() {
 
   return (
     <>
-<p>this is car portal website</p>
+         <h1>project set up complete</h1>
     </>
   )
 }

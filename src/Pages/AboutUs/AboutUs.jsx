@@ -15,8 +15,8 @@ const AboutUs = () => {
           <p className="text-[#737373] font-normal lg:w-4/5">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable.{" "}
+            humour, or rand omized words which don't look even slightly
+            believable.{" "} 
           </p>
           <p className="text-[#737373] font-normal lg:w-4/5 my-3">
             the majority have suffered alteration in some form, by injected

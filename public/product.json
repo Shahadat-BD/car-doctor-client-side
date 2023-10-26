@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "productName": "Car Engine Plug",
+        "price": 19.99,
+        "image": "https://i.ibb.co/cTn4FVH/6.png"
+    },
+    {
+        "id": 2,
+        "productName": "Car Air Filter",
+        "price": 29.99,
+        "image": "https://i.ibb.co/w6rTsmL/3.png"
+    },
+    {
+        "id": 3,
+        "productName": "Car Air Cooler",
+        "price": 9.99,
+        "image": "https://i.ibb.co/McRQnC6/1.png"
+    },
+    {
+        "id": 4,
+        "productName": "Car Wheels Engine",
+        "price": 49.99,
+        "image": "https://i.ibb.co/p4ygHgV/2.png"
+    },
+    {
+        "id": 5,
+        "productName": "New Car Wheels",
+        "price": 39.99,
+        "image": "https://i.ibb.co/vjKkNVM/5.png"
+    },
+    {
+        "id": 6,
+        "productName": "Cools Lead Light",
+        "price": 14.99,
+        "image": "https://i.ibb.co/xhBwRj6/4.png"
+    }
+]

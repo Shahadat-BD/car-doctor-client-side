@@ -6,7 +6,7 @@ const Services = () => {
           <div className='text-center'>
           <h3 className='text-[#FF3811] font-bold'>Services</h3>
             <h1 className='text-4xl font-bold my-3'>Our Services Area</h1>
-            <p className='w-[60%] m-auto'>the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+            <p className='lg:w-[60%] w-full m-auto'>the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
           </div>
            
            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10'>

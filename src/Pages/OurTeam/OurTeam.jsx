@@ -13,7 +13,7 @@ const OurTeam = () => {
       <div className="text-center mb-10">
         <h3 className="text-[#FF3811] font-bold">Team</h3>
         <h1 className="text-4xl font-bold my-3">Meat Our Team</h1>
-        <p className="w-[60%] m-auto">
+        <p className="lg:w-[60%] w-full m-auto">
           the majority have suffered alteration in some form, by injected
           humour, or randomised words which don't look even slightly believable.{" "}
         </p>

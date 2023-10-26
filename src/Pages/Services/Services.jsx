@@ -60,6 +60,9 @@ const Services = () => {
                    </div>
                </div>
            </div>
+           <div className='text-center mt-8'>
+           <button className="px-5 py-2  text-[#FF3811] border border-[#FF3811] rounded-md">More Services</button>
+           </div>
 
         </div>
     );

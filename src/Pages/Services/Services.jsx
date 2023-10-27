@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {BsArrowRightShort} from "react-icons/bs";
 const Services = () => {
+  const [service,setServices] = useState([])
+  useEffect(()=>{
+    fetch("/service.json")
+    .then(res => res.json())
+    .then(data =>{
+         setServices(data)
+    })
+  },[])
     return (
         <div className='my-20'>
           <div className='text-center'>
@@ -10,55 +18,21 @@ const Services = () => {
           </div>
            
            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10'>
-               <div className='border-2 border-gray-100 rounded-md p-4'>
-                  <img className='w-full h-[220px] rounded-md' src='https://i.ibb.co/7vWRLzY/1.jpg' alt="" srcset="" />
-                   <h3 className='font-bold text-xl my-3'>Engine Diagnostics</h3>
-                   <div className='flex items-center'>
-                     <p className='flex-1 text-[#FF3811] font-semibold text-md'>Price : $20.00</p>
-                     <BsArrowRightShort className='text-2xl text-[#FF3811]'/>
-                   </div>
-               </div>
-               <div className='border-2 border-gray-100 rounded-md p-4'>
-                  <img className='w-full h-[220px] rounded-md' src='https://i.ibb.co/xzg0Qn9/2.jpg' alt="" srcset="" />
-                   <h3 className='font-bold text-xl my-3'>Electric System</h3>
-                   <div className='flex items-center'>
-                     <p className='flex-1 text-[#FF3811] font-semibold text-md'>Price : $30.00</p>
-                     <BsArrowRightShort className='text-2xl text-[#FF3811]'/>
-                   </div>
-               </div>
-               <div className='border-2 border-gray-100 rounded-md p-4'>
-                  <img className='w-full h-[220px] rounded-md' src='https://i.ibb.co/qn3Qztr/6.jpg' alt="" srcset="" />
-                   <h3 className='font-bold text-xl my-3'>Auto Car Repair</h3>
-                   <div className='flex items-center'>
-                     <p className='flex-1 text-[#FF3811] font-semibold text-md'>Price : $25.00</p>
-                     <BsArrowRightShort className='text-2xl text-[#FF3811]'/>
-                   </div>
-               </div>
+            {
+              service.map(service => 
 
-               <div className='border-2 border-gray-100 rounded-md p-4'>
-                  <img className='w-full h-[220px] rounded-md' src='https://i.ibb.co/C16YzFt/3.jpg' alt="" srcset="" />
-                   <h3 className='font-bold text-xl my-3'>Electronic System</h3>
+                <div className='border-2 border-gray-100 rounded-md p-4'>
+                  <img className='w-full h-[220px] rounded-md' src={service.img} alt="" srcset="" />
+                   <h3 className='font-bold text-xl my-3'>{service.title}</h3>
                    <div className='flex items-center'>
-                     <p className='flex-1 text-[#FF3811] font-semibold text-md'>Price : $32.00</p>
-                     <BsArrowRightShort className='text-2xl text-[#FF3811]'/>
+                     <p className='flex-1 text-[#FF3811] font-semibold text-md'>${service.price}.00</p>
+                      <button className='flex bg-[#FF3811] px-3 py-1 rounded-md text-white'>Details <BsArrowRightShort className='text-2xl text-white'/></button> 
                    </div>
                </div>
-               <div className='border-2 border-gray-100 rounded-md p-4'>
-                  <img className='w-full h-[220px] rounded-md' src='https://i.ibb.co/JdhhxYZ/4.jpg' alt="" srcset="" />
-                   <h3 className='font-bold text-xl my-3'>Engine Diagnostics</h3>
-                   <div className='flex items-center'>
-                     <p className='flex-1 text-[#FF3811] font-semibold text-md'>Price : $40.00</p>
-                     <BsArrowRightShort className='text-2xl text-[#FF3811]'/>
-                   </div>
-               </div>
-               <div className='border-2 border-gray-100 rounded-md p-4'>
-                  <img className='w-full h-[220px] rounded-md' src='https://i.ibb.co/qn3Qztr/6.jpg' alt="" srcset="" />
-                   <h3 className='font-bold text-xl my-3'>Auto Car Repair</h3>
-                   <div className='flex items-center'>
-                     <p className='flex-1 text-[#FF3811] font-semibold text-md'>Price : $55.00</p>
-                     <BsArrowRightShort className='text-2xl text-[#FF3811]'/>
-                   </div>
-               </div>
+                
+                )
+            }
+               
            </div>
            <div className='text-center mt-8'>
            <button className="px-5 py-2  text-[#FF3811] border border-[#FF3811] rounded-md">More Services</button>

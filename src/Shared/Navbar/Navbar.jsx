@@ -40,9 +40,9 @@ const Navbar = () => {
             borderBottom: isActive ? "2px solid #FF3811" : "none",
             background: isActive ? "none" : "none",
           })}
-          to={"/services"}
+          to={"/service"}
         >
-          Services
+          Service
         </NavLink>
       </li>
       <li>

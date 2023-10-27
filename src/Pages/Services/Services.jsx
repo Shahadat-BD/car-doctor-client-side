@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import {BsArrowRightShort} from "react-icons/bs";
+import { Link } from 'react-router-dom';
 const Services = () => {
   const [service,setServices] = useState([])
   useEffect(()=>{
-    fetch("/service.json")
+    fetch("http://localhost:5000/services")
     .then(res => res.json())
     .then(data =>{
          setServices(data)
@@ -26,7 +27,7 @@ const Services = () => {
                    <h3 className='font-bold text-xl my-3'>{service.title}</h3>
                    <div className='flex items-center'>
                      <p className='flex-1 text-[#FF3811] font-semibold text-md'>${service.price}.00</p>
-                      <button className='flex bg-[#FF3811] px-3 py-1 rounded-md text-white'>Details <BsArrowRightShort className='text-2xl text-white'/></button> 
+                      <Link to={`/services/${service._id}`}><button className='flex bg-[#FF3811] px-3 py-1 rounded-md text-white'>Details <BsArrowRightShort className='text-2xl text-white'/></button> </Link>
                    </div>
                </div>
                 

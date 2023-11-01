@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import OrderTable from '../OrderTable/OrderTable';
 import bannerDetails from "../../assets/images/banner/resize-4.jpg";
+import { toast } from 'react-toastify';
 
 const MyOrder = () => {
     const { user } = useContext(AuthContext)
@@ -14,6 +15,21 @@ const MyOrder = () => {
                 setOrder(data)
             })
     }, [])
+
+    const handleDeleteOrder = id => {
+        fetch(`http://localhost:5000/order/${id}`,{
+            method:"DELETE",
+        })
+        .then(res => res.json())
+        .then(data =>{
+            if (data.deletedCount > 0) {
+                    toast('service deleted successfully')
+                }
+           const remainingService = order.filter(service => service._id !== id)
+           setOrder(remainingService)
+        })
+    }
+    
     return (
         <div className='lg:w-[85%] m-auto w-[95%]'>
             <div className='mt-5 mb-20 relative'>
@@ -38,7 +54,7 @@ const MyOrder = () => {
                     </thead>
                     <tbody>
                         {
-                            order.map(order => <OrderTable key={order._id} order={order}></OrderTable>)
+                            order.map(order => <OrderTable key={order._id} order={order} handleDeleteOrder={handleDeleteOrder}></OrderTable>)
                         }
                     </tbody>
 

@@ -9,9 +9,9 @@ const Banner = () => {
         <div id="slide1" className="carousel-item relative w-full ">
           <img
             src={banner_1}
-            className="w-full lg:h-[650px] md:h-[600px] h-[300px] rounded-md"
+            className="w-full lg:h-[650px] md:h-[600px] h-[300px] rounded-lg"
           />
-          <div className="absolute text-white bg-gradient-to-l from-[#49484800] to-[#101010] h-full ">
+          <div className="absolute text-white rounded-lg bg-gradient-to-l from-[#49484800] to-[#101010] h-full ">
             <div className="lg:mt-32 lg:ml-10">
             <h1 className="lg:text-6xl md:text-4xl text-lg font-bold">
               Affordable <br /> Price For Car <br /> Servicing
@@ -21,7 +21,7 @@ const Banner = () => {
             <button className="border border-gray-300 text-white px-5 py-2 rounded-sm font-semibold">Latest Product</button>
             </div>
           </div>
-          <div className="absolute flex justify-end gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
+          <div className="absolute  flex justify-end gap-5 transform -translate-y-1/2 left-5 right-5 bottom-0">
             <a
               href="#slide3"
               className="bg-[#49546684] w-16 h-16 rounded-full flex items-center justify-center text-white"
@@ -39,9 +39,9 @@ const Banner = () => {
         <div id="slide2" className="carousel-item relative w-full ">
           <img
             src={banner_2}
-            className="w-full lg:h-[650px] md:h-[600px] h-[300px] rounded-md"
+            className="w-full lg:h-[650px] md:h-[600px] h-[300px] rounded-lg"
           />
-          <div className="absolute bg-gradient-to-l from-[#49484800] to-[#101010] h-full text-white">
+          <div className="absolute rounded-lg bg-gradient-to-l from-[#49484800] to-[#101010] h-full text-white">
           <div className="lg:mt-32 lg:ml-10 lg:text-left text-center">
             <h1 className="lg:text-6xl md:text-4xl text-lg font-bold lg:w-[40%] w-full">
               Affordable Price For Car Servicing
@@ -69,9 +69,9 @@ const Banner = () => {
         <div id="slide3" className="carousel-item relative w-full ">
           <img
             src={banner_3}
-            className="w-full lg:h-[650px] md:h-[600px] h-[300px] rounded-md"
+            className="w-full lg:h-[650px] md:h-[600px] h-[300px] rounded-lg"
           />
-          <div className="absolute bg-gradient-to-l from-[#49484800] to-[#101010] h-full text-white">
+          <div className="absolute rounded-lg bg-gradient-to-l from-[#49484800] to-[#101010] h-full text-white">
           <div className="lg:mt-32 lg:ml-10">
             <h1 className="lg:text-6xl md:text-4xl text-lg font-bold">
               Affordable <br /> Price For Car <br /> Servicing

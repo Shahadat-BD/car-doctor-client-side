@@ -53,9 +53,9 @@ const Navbar = () => {
             borderBottom: isActive ? "2px solid #FF3811" : "none",
             background: isActive ? "none" : "none",
           })}
-          to={"/service"}
+          to={"/order"}
         >
-          Service
+          My order
         </NavLink>
       </li>
      

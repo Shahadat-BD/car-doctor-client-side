@@ -1,22 +1,23 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData , Link} from 'react-router-dom';
 import {  BsArrowRightShort} from "react-icons/bs";
 import details from "../../assets/icons/social/details.png";
 import bannerDetails from "../../assets/images/banner/resize-4.jpg";
 import logo from "../../assets/icons/social/logo.png";
 const ServiceDetails = () => {
     const serviceDetails = useLoaderData()
-    const {img,title,price,description,facility} = serviceDetails
+    const {img,title,price,description,facility,_id} = serviceDetails
     return (
         <div className='lg:w-[85%] m-auto w-[95%]'>
             <div className='mt-5 mb-20 relative'>
-                <img className='w-full' src={bannerDetails} alt="" srcset="" />
-                <div className='absolute top-0 w-full h-full bg-gradient-to-l from-[#1010105f] to-[#101010b3]'>
+                <img className='w-full rounded-md' src={bannerDetails} alt="" srcset="" />
+                <div className='absolute rounded-md top-0 w-full h-full bg-gradient-to-l from-[#1010105f] to-[#101010b3]'>
                        <p className='flex justify-center items-center font-bold h-full text-white lg:text-4xl text-xl'>Service Details</p>
                        
                 </div>
              
             </div>
+
             <div className='flex lg:flex-row flex-col gap-8'>
                 <div className='lg:w-3/4 w-full'>
                    <img className='w-full rounded-md' src={img} alt="" srcset="" />
@@ -105,7 +106,9 @@ const ServiceDetails = () => {
                  {/* checkout */}
                  <div className='text-center mb-5'>
                     <p className='text-2xl font-bold my-3'>Price: ${price }</p>
+                    <Link to={`/checkout/${_id}`}>
                     <button className='bg-[#FF3811] text-white font-semibold text-lg px-7 py-2 rounded-md'>Proceed Checkout</button>
+                    </Link>
                  </div>
                 </div>
             </div>

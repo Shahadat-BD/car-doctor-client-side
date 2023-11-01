@@ -19,20 +19,19 @@ const Services = () => {
           </div>
            
            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10'>
-            {
-              service.map(service => 
+         {
+           service.map(service => 
 
-                <div className='border-2 border-gray-100 rounded-md p-4'>
-                  <img className='w-full h-[220px] rounded-md' src={service.img} alt="" srcset="" />
-                   <h3 className='font-bold text-xl my-3'>{service.title}</h3>
-                   <div className='flex items-center'>
-                     <p className='flex-1 text-[#FF3811] font-semibold text-md'>${service.price}.00</p>
-                      <Link to={`/services/${service._id}`}><button className='flex bg-[#FF3811] px-3 py-1 rounded-md text-white'>Details <BsArrowRightShort className='text-2xl text-white'/></button> </Link>
-                   </div>
+            <div className='border-2 border-gray-100 rounded-md p-4'>
+              <img className='w-full h-[220px] rounded-md' src={service.img} alt="" srcset="" />
+               <h3 className='font-bold text-xl my-3'>{service.title}</h3>
+               <div className='flex items-center'>
+                 <p className='flex-1 text-[#FF3811] font-semibold text-md'>${service.price}.00</p>
+                  <Link to={`/services/${service._id}`}><button className='flex bg-[#FF3811] px-3 py-1 rounded-md text-white'>Details <BsArrowRightShort className='text-2xl text-white'/></button> </Link>
                </div>
-                
-                )
-            }
+           </div>
+          )
+         }
                
            </div>
            <div className='text-center mt-8'>

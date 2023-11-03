@@ -30,7 +30,7 @@ const MyOrder = () => {
           })
           .then((result)=> {
               if (result.isConfirmed) {
-                fetch(`http://localhost:5000/order/${id}`,{
+                fetch(`https://cat-doctor-server-side.vercel.app/order/${id}`,{
                     method:"DELETE",
                 })
                 .then(res => res.json())

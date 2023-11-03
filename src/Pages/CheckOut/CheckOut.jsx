@@ -21,7 +21,7 @@ const CheckOut = () => {
 
         const serviceInfo = {serviceName,email,price,date,serviceImage,message}
 
-        fetch('http://localhost:5000/order',{
+        fetch('https://cat-doctor-server-side.vercel.app/order',{
           method:"POST",
           headers:{
               'content-type':'application/json'

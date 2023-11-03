@@ -37,12 +37,12 @@ const signInUser = (email,password) =>{
         console.log('current user', currentUser);
         // id user exit then issue a token
         if (currentUser) {
-            axios.post( 'http://localhost:5000/jwt' , loggedUser , {withCredentials : true})
+            axios.post( 'https://cat-doctor-server-side.vercel.app/jwt' , loggedUser , {withCredentials : true})
             .then(res => {
                 console.log( "token response", res.data);
             })
         }else{
-            axios.post('http://localhost:5000/logout',loggedUser,
+            axios.post('https://cat-doctor-server-side.vercel.app/logout',loggedUser,
             {withCredentials:true})
             .then(res => {
                 console.log(res.data);

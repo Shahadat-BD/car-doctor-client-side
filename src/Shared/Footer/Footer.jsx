@@ -9,14 +9,14 @@ const Footer = () => {
         <div>
             <footer className="footer p-10 bg-[#151515]">
   <aside>
-    <img src={logo} alt="" srcset="" />
+    <img src={logo} alt=""  />
     <p className='text-white font-bold '>Car Doctor</p>
     <p className='text-[#E8E8E8] mt-2 w-full'>Edwin Diaz is a software and web <br />technologies engineer, a life coach <br />  trainer who is also a serial .</p>
    <div className='flex gap-2'>
-   <img className='w-8 h-8 rounded-full bg-[#2c2c2c] p-2' src={icon_1} alt="" srcset="" />
-    <img className='w-8 h-8 rounded-full bg-[#2c2c2c] p-2' src={icon_2} alt="" srcset="" />
-    <img className='w-8 h-8 rounded-full bg-[#2c2c2c] p-2' src={icon_3} alt="" srcset="" />
-    <img className='w-8 h-8 rounded-full bg-[#2c2c2c] p-2' src={icon_4} alt="" srcset="" />
+   <img className='w-8 h-8 rounded-full bg-[#2c2c2c] p-2' src={icon_1} alt=""  />
+    <img className='w-8 h-8 rounded-full bg-[#2c2c2c] p-2' src={icon_2} alt=""  />
+    <img className='w-8 h-8 rounded-full bg-[#2c2c2c] p-2' src={icon_3} alt=""  />
+    <img className='w-8 h-8 rounded-full bg-[#2c2c2c] p-2' src={icon_4} alt=""  />
    </div>
   </aside> 
   

@@ -9,7 +9,6 @@ const ProductCart = ({ product }) => {
           className="w-[150px] h-[150px] m-auto"
           src={image}
           alt=""
-          srcset=""
         />
       </div>
       <div className="text-center">

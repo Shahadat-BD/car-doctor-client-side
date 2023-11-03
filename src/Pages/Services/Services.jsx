@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from 'react';
 import {BsArrowRightShort} from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import useService from '../../hook/useService';
 const Services = () => {
-  const [service,setServices] = useState([])
-  useEffect(()=>{
-    fetch("http://localhost:5000/services")
-    .then(res => res.json())
-    .then(data =>{
-         setServices(data)
-    })
-  },[])
+   const service = useService()
     return (
         <div className='my-20'>
           <div className='text-center'>
@@ -22,8 +15,8 @@ const Services = () => {
          {
            service.map(service => 
 
-            <div className='border-2 border-gray-100 rounded-md p-4'>
-              <img className='w-full h-[220px] rounded-md' src={service.img} alt="" srcset="" />
+            <div key={service._id} className='border-2 border-gray-100 rounded-md p-4'>
+              <img className='w-full h-[220px] rounded-md' src={service.img} alt=""  />
                <h3 className='font-bold text-xl my-3'>{service.title}</h3>
                <div className='flex items-center'>
                  <p className='flex-1 text-[#FF3811] font-semibold text-md'>${service.price}.00</p>

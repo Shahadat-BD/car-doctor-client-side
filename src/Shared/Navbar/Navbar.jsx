@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useAuth from "../../hook/useAuth";
 const Navbar = () => {
  
-  const {user,logOut} = useContext(AuthContext)
+  const {user,logOut} = useAuth()
   const handleLogOut = () => {
     logOut()
       .then(() => {
@@ -59,6 +58,39 @@ const Navbar = () => {
         </NavLink>
       </li>
      
+      {user ? (
+          <li>
+            <NavLink
+            onClick={handleLogOut}
+            className="px-0 mr-10 rounded-none font-semibold text-md"
+            style={({ isActive }) => ({
+              color: isActive ? "white" : "white",
+              paddingLeft : '20px',
+              paddingRight : '20px',
+              borderRadius:"5px",
+              backgroundColor: isActive ? "#FF3811" : "#FF3811",
+            })}
+        >
+            LogOut
+          </NavLink>
+          </li>
+        ) : (
+        <li>
+            <NavLink
+            to={"/login"}
+            className="px-0 mr-10 rounded-none font-semibold text-md"
+            style={({ isActive }) => ({
+              color: isActive ? "white" : "white",
+              paddingLeft : '20px',
+              paddingRight : '20px',
+              borderRadius:"5px",
+              backgroundColor: isActive ? "#FF3811" : "#FF3811",
+            })}
+          >
+            Login
+          </NavLink>
+        </li>
+        )}
    
     </>
   );
@@ -91,7 +123,7 @@ const Navbar = () => {
               {link}
             </ul>
           </div>
-           <img className="lg:h-[80px] md:h-[80px] h-[50px]" src={logo} alt="" srcset="" />
+           <img className="lg:h-[80px] md:h-[80px] h-[50px]" src={logo} alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{link}</ul>
@@ -104,22 +136,8 @@ const Navbar = () => {
           ""
         }
 
-<p className="mr-3 lg:text-md md:text-md text-xs">{user && user.displayName}</p>
-        {user ? (
-          <NavLink
-            onClick={handleLogOut}
-            className="bg-red-500 text-white lg:px-8 lg:py-3 px-3 py-2 lg:text-md text-xs font-semibold rounded-md"
-        >
-            LogOut
-          </NavLink>
-        ) : (
-          <NavLink
-            to={"/login"}
-            className="bg-red-500 text-white lg:px-8 lg:py-3 px-3 py-2 lg:text-md text-xs font-semibold rounded-md"
-          >
-            Login
-          </NavLink>
-        )}
+<p className="mr-3 lg:text-lg md:text-md text-md">{user && user.displayName}</p>
+        
               <button className="px-5 py-2  text-[#FF3811] border border-[#FF3811] rounded-md">Appointment</button>
         </div>
         <ToastContainer/>

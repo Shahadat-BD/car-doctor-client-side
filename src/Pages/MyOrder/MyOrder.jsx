@@ -1,39 +1,60 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../AuthProvider/AuthProvider';
+import React, { useEffect, useState } from 'react';
 import OrderTable from '../OrderTable/OrderTable';
 import bannerDetails from "../../assets/images/banner/resize-4.jpg";
-import { toast } from 'react-toastify';
+import Swal from 'sweetalert2'
+import useAuth from '../../hook/useAuth';
+import useAxiosSecure from '../../hook/useAxiosSecure';
 
 const MyOrder = () => {
-    const { user } = useContext(AuthContext)
+    const { user } = useAuth()
     const [order, setOrder] = useState([])
+    const axiosSecure = useAxiosSecure()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order?email=${user.email}`)
-            .then(res => res.json())
-            .then(data => {
-                setOrder(data)
-            })
+        axiosSecure.get(`/order?email=${user.email}`)
+            .then(res => {
+                        setOrder(res.data)
+                    })
     }, [])
 
     const handleDeleteOrder = id => {
-        fetch(`http://localhost:5000/order/${id}`,{
-            method:"DELETE",
-        })
-        .then(res => res.json())
-        .then(data =>{
-            if (data.deletedCount > 0) {
-                    toast('service deleted successfully')
-                }
-           const remainingService = order.filter(service => service._id !== id)
-           setOrder(remainingService)
-        })
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You want to delete this service",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          })
+          .then((result)=> {
+              if (result.isConfirmed) {
+                fetch(`http://localhost:5000/order/${id}`,{
+                    method:"DELETE",
+                })
+                .then(res => res.json())
+                .then(data =>{
+                    if (data.deletedCount > 0) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Your service has been deleted successfully.',
+                            'success'
+                          )
+                        }
+                   const remainingService = order.filter(service => service._id !== id)
+                   setOrder(remainingService)
+                })
+              }
+          })
+
+       
     }
     
     return (
         <div className='lg:w-[85%] m-auto w-[95%]'>
             <div className='mt-5 mb-20 relative'>
-                <img className='w-full rounded-md' src={bannerDetails} alt="" srcset="" />
+                <img className='w-full rounded-md' src={bannerDetails} alt="" />
                 <div className='absolute rounded-md top-0 w-full h-full bg-gradient-to-l from-[#1010105f] to-[#101010b3]'>
                     <p className='flex justify-center items-center font-bold h-full text-white lg:text-4xl text-xl'>My Order</p>
                 </div>

@@ -1,16 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from "firebase/auth";
 import {FiEye,FiEyeOff} from 'react-icons/fi'
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+import useAuth from "../../hook/useAuth";
+
 const Register = () => {
     const navigate = useNavigate()
     const location = useLocation();
     const [showPassword,setShowPassword] = useState(false)
-    const {googleSignIn,setUser,createSignInUser} = useContext(AuthContext)
+    const {googleSignIn,setUser,createSignInUser} = useAuth()
 
     const handleRegisterForm = e =>{
            e.preventDefault()
@@ -76,7 +77,7 @@ const Register = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="name"
+                  placeholder="write your name"
                   className="input input-bordered"
                   required
                 />
@@ -86,7 +87,7 @@ const Register = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="write your email"
                   className="input input-bordered"
                   required
                 />
@@ -96,7 +97,7 @@ const Register = () => {
                 <input
                   type="text"
                   name="photoURL"
-                  placeholder="photo url"
+                  placeholder="write your photo url"
                   className="input input-bordered"
                   required
                 />

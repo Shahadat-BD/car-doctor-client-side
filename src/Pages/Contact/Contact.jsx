@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-5">
 
           <div className="flex items-center gap-3">
-            <img className="" src={contact_img_1} alt="" srcset="" />
+            <img className="" src={contact_img_1} alt=""  />
 
             <div>
               <h3 className="text-gray-300">We are open monday-friday</h3>
@@ -19,7 +19,7 @@ const Contact = () => {
 
           <div>
               <div className="flex items-center gap-3">
-                <img src={contact_img_2} alt="" srcset="" />
+                <img src={contact_img_2} alt=""  />
                 <div>
                   <h3 className="text-gray-300 font-medium">
                     Have A Question ?{" "}
@@ -31,7 +31,7 @@ const Contact = () => {
 
           <div>
               <div className="flex items-center gap-3">
-                <img src={contact_img_3} alt="" srcset="" />
+                <img src={contact_img_3} alt=""  />
                 <div>
                   <h3 className="text-gray-300">Need a repair? our address</h3>
                   <p className="text-xl font-medium">Liza Street, New York</p>

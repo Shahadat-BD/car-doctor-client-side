@@ -24,19 +24,19 @@ const OurTeam = () => {
             className="w-[93%]  m-auto my-3 h-[250px] rounded-lg"
             src={team_1}
             alt=""
-            srcset=""
+            
           />
           <h2 className="text-xl font-bold mt-3">David Maccalam</h2>
           <h3 className="text-gray-500 font-semibold">Car Engine Expert</h3>
           <div className="flex justify-center my-3">
-            <img className="h-[38px] mr-3" src={social_1} alt="" srcset="" />
-            <img className="h-[38px] mr-3" src={social_2} alt="" srcset="" />
-            <img className="h-[38px] mr-3" src={social_3} alt="" srcset="" />
+            <img className="h-[38px] mr-3" src={social_1} alt=""  />
+            <img className="h-[38px] mr-3" src={social_2} alt=""  />
+            <img className="h-[38px] mr-3" src={social_3} alt=""  />
             <img
               className="h-[38px]  bg-red-500 p-2 rounded-full"
               src={social_4}
               alt=""
-              srcset=""
+              
             />
           </div>
         </div>
@@ -45,19 +45,19 @@ const OurTeam = () => {
             className="w-[93%]  m-auto my-3 h-[250px] rounded-lg"
             src={team_2}
             alt=""
-            srcset=""
+            
           />
           <h2 className="text-xl font-bold mt-3"> Mitchel Santer </h2>
           <h3 className="text-gray-500 font-semibold">Car Engine Expert</h3>
           <div className="flex justify-center my-3">
-            <img className="h-[38px] mr-3" src={social_1} alt="" srcset="" />
-            <img className="h-[38px] mr-3" src={social_2} alt="" srcset="" />
-            <img className="h-[38px] mr-3" src={social_3} alt="" srcset="" />
+            <img className="h-[38px] mr-3" src={social_1} alt=""  />
+            <img className="h-[38px] mr-3" src={social_2} alt=""  />
+            <img className="h-[38px] mr-3" src={social_3} alt=""  />
             <img
               className="h-[38px]  bg-red-500 p-2 rounded-full"
               src={social_4}
               alt=""
-              srcset=""
+              
             />
           </div>
         </div>
@@ -66,19 +66,19 @@ const OurTeam = () => {
             className="w-[93%]  m-auto my-3 h-[250px] rounded-lg"
             src={team_3}
             alt=""
-            srcset=""
+            
           />
           <h2 className="text-xl font-bold mt-3">Jhack Willieamson</h2>
           <h3 className="text-gray-500 font-semibold">Car Engine Expert</h3>
           <div className="flex justify-center my-3">
-            <img className="h-[38px] mr-3" src={social_1} alt="" srcset="" />
-            <img className="h-[38px] mr-3" src={social_2} alt="" srcset="" />
-            <img className="h-[38px] mr-3" src={social_3} alt="" srcset="" />
+            <img className="h-[38px] mr-3" src={social_1} alt=""  />
+            <img className="h-[38px] mr-3" src={social_2} alt=""  />
+            <img className="h-[38px] mr-3" src={social_3} alt=""  />
             <img
               className="h-[38px]  bg-red-500 p-2 rounded-full"
               src={social_4}
               alt=""
-              srcset=""
+              
             />
           </div>
         </div>

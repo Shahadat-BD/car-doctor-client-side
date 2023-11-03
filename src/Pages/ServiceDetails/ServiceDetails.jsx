@@ -10,7 +10,7 @@ const ServiceDetails = () => {
     return (
         <div className='lg:w-[85%] m-auto w-[95%]'>
             <div className='mt-5 mb-20 relative'>
-                <img className='w-full rounded-md' src={bannerDetails} alt="" srcset="" />
+                <img className='w-full rounded-md' src={bannerDetails} alt=""  />
                 <div className='absolute rounded-md top-0 w-full h-full bg-gradient-to-l from-[#1010105f] to-[#101010b3]'>
                        <p className='flex justify-center items-center font-bold h-full text-white lg:text-4xl text-xl'>Service Details</p>
                        
@@ -20,7 +20,7 @@ const ServiceDetails = () => {
 
             <div className='flex lg:flex-row flex-col gap-8'>
                 <div className='lg:w-3/4 w-full'>
-                   <img className='w-full rounded-md' src={img} alt="" srcset="" />
+                   <img className='w-full rounded-md' src={img} alt=""  />
                    <h3 className='text-3xl font-bold mt-3'>{title}</h3>
                    <p className='my-3'>{description}</p>
                    <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 lg:mb-20 mb-5 mt-7'>
@@ -63,7 +63,7 @@ const ServiceDetails = () => {
                                 <div className='flex mb-3 items-cente'>
                                     <div className='flex-1'>
                                     <div className='flex items-center gap-2'>
-                                            <img src={details} alt="" srcset="" />
+                                            <img src={details} alt=""  />
                                             <div>
                                             <h3 className='text-md font-medium text-white'>Our Brochure</h3>
                                             <h3 className='text-gray-500 font-normal'>Download</h3>
@@ -75,7 +75,7 @@ const ServiceDetails = () => {
                                 <div className='flex mb-3 items-center'>
                                     <div className='flex-1'>
                                         <div className='flex items-center gap-2'>
-                                            <img src={details} alt="" srcset="" />
+                                            <img src={details} alt=""  />
                                             <div>
                                             <h3 className='text-md font-medium text-white'>Company Details</h3>
                                             <h3 className='text-gray-500 font-normal'>Download</h3>
@@ -91,7 +91,7 @@ const ServiceDetails = () => {
 
                   <div className='bg-black rounded-md p-2 pb-10 mt-5'>
                      <div className='text-center text-white'>
-                         <img className='w-1/4 m-auto mt-5' src={logo} alt="" srcset="" />
+                         <img className='w-1/4 m-auto mt-5' src={logo} alt=""  />
                          <p className='text-xl font-bold mt-3 mb-5'>Car Doctor</p>
                          <p className='text-md font-semibold lg:w-[70%] w-full mb-5 m-auto'>Need Help? We Are Here To Help You</p>
                          <div className='relative bg-white lg:w-3/4 w-full pt-3 pb-10 m-auto rounded-md '>

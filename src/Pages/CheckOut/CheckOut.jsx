@@ -1,14 +1,13 @@
-import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
 import bannerDetails from "../../assets/images/banner/resize-4.jpg";
+import useAuth from "../../hook/useAuth";
 
 const CheckOut = () => {
     const serviceLoader = useLoaderData()
     const {img,title,price} = serviceLoader
-    const {user} = useContext(AuthContext)
+    const {user} = useAuth()
 
     const handleNewProductAdd = event => {
         event.preventDefault()
@@ -40,7 +39,7 @@ const CheckOut = () => {
     return (
         <div className='lg:w-[85%] m-auto w-[95%] my-10'>
         <div className='mt-5 mb-10 relative'>
-            <img className='w-full rounded-md'  src={bannerDetails} alt="" srcset="" />
+            <img className='w-full rounded-md'  src={bannerDetails} alt=""  />
             <div className='absolute rounded-md top-0 w-full h-full bg-gradient-to-l from-[#1010105f] to-[#101010b3]'>
                 <p className='flex justify-center items-center font-bold h-full text-white lg:text-4xl text-xl'>Order Checkout</p>
             </div>

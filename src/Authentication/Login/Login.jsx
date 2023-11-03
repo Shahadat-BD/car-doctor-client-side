@@ -1,15 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {FiEye,FiEyeOff} from 'react-icons/fi'
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+import useAuth from "../../hook/useAuth";
 const Login = () => {
   const location = useLocation();
   const navigate = useNavigate()
   const [showPassword,setShowPassword] = useState(false)
-  const { setUser, signInUser,googleSignIn} = useContext(AuthContext);
+  const { setUser, signInUser,googleSignIn} = useAuth()
 
   const handleLoginForm = (e) => {
     e.preventDefault();
@@ -55,7 +55,7 @@ const Login = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="write your email"
                   className="input input-bordered"
                   required
                 />
